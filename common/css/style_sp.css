@@ -1,0 +1,582 @@
+@charset "utf-8";
+
+/* CSS Document */
+/* リセットcss */
+
+*{
+margin: 0;
+padding: 0;
+
+}
+
+body{
+font-family: YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN',' ヒラギノ角ゴProN W3',' メイリオ ', Meiryo,sans-serif;
+
+margin: 0 auto;
+}
+
+img{
+display: block;
+}
+a{
+text-decoration: none;
+
+}
+li {
+list-style-type: none;
+}
+
+/*ハンバーガーメニュー部分ここから*/
+
+header{
+margin: 0 auto;
+}
+
+#logo a{
+color: white;
+font-size: 2em;
+font-family: 'Noto Serif SC', serif;
+}
+
+#shoptime p{
+color: white;
+box-sizing: border-box;
+padding: 10px;
+font-size: 0.9em;
+}
+#reservation{
+background-color: #212f19;
+}
+/*電話ボタン部分ここから*/
+
+/*.button {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.button {
+  background-color: #212f19;;
+  border: 2px solid white;
+  color: #fff;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+.button:hover {
+  background-color: white;
+  border-color: #212f19;
+  color: #212f19;
+}*/
+/*ハンバーガーメニュー部分ここから*/
+#nav-toggle{
+width: 30px;
+height: 25px;
+position: fixed;
+top: 15px;
+right: 20px;
+z-index: 1000;
+}
+#nav-toggle>div {
+position: relative;
+width: 100%;
+height: 100%;
+display: none;
+}
+#nav-toggle span {
+display: block;
+width: 100%;
+height: 3px;
+background-color: white;
+position: absolute;
+left: 0;
+transition: all .6s ease;
+}
+  #nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+
+  #nav-toggle span:nth-child(2) {
+    top: 10px;
+  }
+
+  #nav-toggle span:nth-child(3) {
+    top: 20px;
+  }
+
+  #nav-toggle:hover span:nth-child(1) {
+    top: 4px;
+  }
+
+  #nav-toggle:hover span:nth-child(3) {
+    top: 23px;
+  }
+
+  .open #nav-toggle span {
+    background: #333;
+  }
+
+  .open #nav-toggle span:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+
+  .open #nav-toggle span:nth-child(2) {
+    top: 15px;
+    width: 0;
+    left: 50%;
+  }
+
+  .open #nav-toggle span:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+  .open #gNavi2{
+       visibility:visible;
+       opacity:1.0;
+       margin: 0 auto;
+    width: 100%;
+  }
+  /* z-index */
+  #nav-toggle {
+    z-index: 1000;
+  }
+  #container {
+    z-index: 900;
+  }
+  #gNavi2 {
+    background: #f9f9f9ed;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    font-size: 29px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #gNavi2 li{
+background-color:rgb(166, 188, 246);
+padding: 20px 50px ;
+text-decoration: underline;
+  }
+#gNavi2 a{
+text-decoration: none;
+}
+
+
+#gNavi {
+  margin-top: -99px;
+  background: #f9f9f9ed;
+  color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 990;
+  font-size: 29px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+  margin-top: 10px
+}
+#gNavi{
+margin: 0 auto;
+margin-top: 50px;
+overflow: hidden;
+}
+
+#gNavi li:hover{
+    opacity: 0.5;
+}
+
+#gNavi  ul{
+display: flex;
+justify-content: space-between;
+}
+#gNavi li{
+text-align: center;
+width: 200px;
+}
+
+
+#gNavi a{
+height: 18px;
+color: green;
+margin-left: 10px;
+ }
+
+#gNavi li {
+  border-left: 1px solid green;
+}
+
+#breadcrumb {
+width: 1000px;
+float: left;
+}
+
+#breadcrumb li::after {
+  margin-left: 10px;
+  content: '>';
+}
+#breadcrumb ul li{
+display: inline;
+margin-right: 5px;
+}
+#breadcrumb li:last-child::after {
+  content: '';
+}
+/*mainPhoto部分ここから*/
+
+/*slideshow*/
+
+h1{
+margin-left: auto;
+margin-right: auto;
+height: auto;
+}
+#mainPhoto{
+height: 270px;
+margin: 0px auto;
+position: relative;
+overflow: hidden;
+}
+
+#mainPhoto li p{
+background: rgba(255,255,255,0.5);
+padding: 10px;
+font-size: 0.5em;
+margin-top: 64px;
+float: right;
+}
+
+#mainPhoto .left p {
+background: rgba(255,255,255,0.5);
+padding: 10px;
+font-size: 0.5em;
+margin-top: 64px;
+float: left;
+}
+#mainPhoto li{
+width: 100%;
+height: 300px;
+position: absolute;
+left: 0;
+opacity: 0;
+}
+#mainPhoto li:nth-child(1){
+background-image:url(../images/consept07.jpg);
+background-size: contain;
+animation: slideshow 15s linear 0s infinite;
+background-repeat: no-repeat;
+}
+#mainPhoto li:nth-child(2){
+background-image: url(../images/consept06.jpg);
+background-size: contain;
+animation: slideshow 15s linear 5s infinite;
+background-repeat: no-repeat;
+}
+#mainPhoto li:nth-child(3){
+background-image: url(../images/consept05.jpg);
+background-size: contain;
+animation: slideshow 15s linear 10s infinite;
+background-repeat: no-repeat;
+}
+@keyframes slideshow{
+0%{opacity: 0;}
+10%{opacity: 1;}
+30%{opacity: 1;}
+40%{opacity: 0;}
+100%{opacity: 0;}
+}
+
+
+/*h2部分ここから*/
+
+h2 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 35px;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.line {
+	position: relative;
+	padding: 0.1em 0.3em;
+	display: inline-block;
+	transition: .3s;
+	color: gray;
+}
+.line::before,
+.line::after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 2px;
+	background-color: gray;
+	transition: .3s;
+}
+.line::before {
+	top: 0;
+	left: 0;
+}
+.line::after {
+	bottom: 0;
+	right: 0;
+}
+.line:hover::before,
+.line:hover::after {
+	width: 100%;
+}
+/*menu部分ここから*/
+#menu figcaption{
+box-sizing: border-box;
+padding: 20px;
+text-decoration: underline solid 1px;
+}
+
+#menu {
+  margin: 0 auto;
+}
+#menu img
+{
+display: block;
+width: 84%;
+margin: 0 auto;
+}
+
+
+/*news部分ここから*/
+
+#news {
+  margin: 0 auto;
+  width: 60%;
+}
+#news　table{
+border-style: none;
+}
+#news time{
+font-weight: bold;
+display: list-item;
+}
+#news a{
+color: black;
+
+}
+/*Contact部分ここから*/
+
+#box1 {
+background-image: url(../images/ricrut.jpg);
+background-repeat: no-repeat;
+height: auto;
+
+}
+.Contactbutton {
+  display: block;
+  width: 255px;
+  height: 60px;
+  margin: 0 auto;
+  text-decoration: none;
+  line-height: 60px;
+  text-align: center;
+}
+.Contactbutton::before,
+.Contactbutton::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.Contactbutton,
+.Contactbutton::before,
+.Contactbutton::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.Contactbutton {
+background-color: #212f19;;
+border: 2px solid white;
+color: #fff;
+margin-top: 50px;
+}
+.Contactbutton:hover {
+  background-color: white;
+  border-color: #212f19;
+  color: #212f19;
+}
+
+
+#box1 p{
+text-align: center;
+line-height: 3em;
+padding-top: 20px;
+}
+/*access部分ここから*/
+#access{
+margin: 0 auto;
+}
+#address {
+box-sizing: border-box;
+padding: 20px;
+}
+
+.addressbutton{
+  display: block;
+  width: 255px;
+  height: 60px;
+  margin: 0 auto;
+  text-decoration: none;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.addressbutton::before,
+.addressbutton::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.addressbutton,
+.addressbutton::before,
+.addressbutton::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.addressbutton {
+  background-color: #212f19;;
+  border: 2px solid white;
+  color: #fff;
+
+}
+.addressbutton:hover {
+  background-color: white;
+  border-color: #212f19;
+  color: #212f19;
+}
+iframe{
+margin-bottom: 40px;
+width: 100%;
+}
+
+
+/*フッター部分ここから*/
+footer{
+height: auto;
+background-color: #212f19;
+
+}
+#footer{
+text-align: center;
+}
+
+
+
+#footergNavi a{
+color: white;
+}
+
+#footergNavi a:hover{
+color: rgb(205, 204, 87);
+}
+
+
+#footergNavi{
+padding-bottom: 10px;
+}
+
+#footergNavi ul{
+width: 50%;
+margin: 0 auto;
+margin-top: 20px;
+text-align: center;
+}
+#copyright{
+text-align: center;
+color: white;
+}
+/*電話ボタン部分ここから*/
+
+.sp {
+display: inline-block;
+width: 200px;
+text-align: center;
+text-decoration: none;
+outline: none;
+border: 2px solid white;
+color: #fff;
+line-height: 50px;
+margin-bottom: 10px;
+}
+.sp::before,
+.sp::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+
+.sp,
+.sp::before,
+.sp:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.sp:hover{
+  background-color: white;
+  border-color: #212f19;
+  color: #212f19
+
+
+}
+.pc{
+  display: none;
+}
